@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammad Mahfus Amin & Nily Januarti | The Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <div class="opening" id="opening">
+
+        <div class="opening-decoration">
+            ✦
+        </div>
+
+        <div class="opening-content">
+
+            <p class="opening-subtitle">
+                THE WEDDING OF
+            </p>
+
+            <h1>
+                Muhammad Mahfus Amin
+                <span>&</span>
+                Nily Januarti
+            </h1>
+
+            <div class="opening-line"></div>
+
+            <p class="opening-date">
+                12 • 08 • 2026
+            </p>
+
+            <div class="guest-box">
+
+                <p>
+                    Kepada Yth.
+                </p>
+
+                <h3>
+                    Bapak/Ibu/Saudara/i
+                </h3>
+
+                <p>
+                    Tanpa mengurangi rasa hormat,
+                    kami mengundang Anda untuk hadir
+                    di hari bahagia kami.
+                </p>
+
+            </div>
+
+            <button class="open-button" onclick="openInvitation()">
+
+                <span>💌</span>
+
+                Buka Undangan
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MUSIC
+    ========================== -->
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()">
+
+        🎵
+
+    </button>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main id="content">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    THE WEDDING OF
+                </p>
+
+                <h1>
+                    Amin
+                    <span>&</span>
+                    Nily
+                </h1>
+
+                <div class="hero-line"></div>
+
+                <p>
+                    12 September 2026
+                </p>
+
+                <div class="scroll-down">
+                    ↓
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="section intro">
+
+            <p class="arabic">
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+            </p>
+
+            <p class="label">
+                ASSALAMU'ALAIKUM WARAHMATULLAHI WABARAKATUH
+            </p>
+
+            <h2>
+                Dengan Memohon<br>
+                Ridho Allah SWT
+            </h2>
+
+            <p class="description">
+
+                Dengan penuh rasa syukur dan memohon
+                ridho Allah SWT, kami bermaksud
+                mengundang Bapak/Ibu/Saudara/i untuk
+                hadir dan memberikan doa restu pada
+                acara pernikahan kami.
+
+            </p>
+
+            <div class="ornament">
+                ❦
+            </div>
+
+        </section>
+
+
+        <!-- COUPLE -->
+
+        <section class="section couple-section">
+
+            <p class="label">
+                THE BRIDE & GROOM
+            </p>
+
+            <h2>
+                Mempelai
+            </h2>
+
+            <div class="couple-container">
+
+
+                <!-- PRIA -->
+
+                <div class="person">
+
+                    <div class="portrait">
+
+                        <img
+                            src="images/dalam.jpeg"
+                            alt="Amin">
+
+                    </div>
+
+                    <h3>
+                        Muhammad Mahfus Amin
+                    </h3>
+
+                    <p>
+                        Putra dari
+                    </p>
+
+                    <strong>
+                        Bapak Nama Ayah<br>
+                        & Ibu Nama Ibu
+                    </strong>
+
+                </div>
+
+
+                <div class="couple-symbol">
+                    &
+                </div>
+
+
+                <!-- WANITA -->
+
+                <div class="person">
+
+                    <div class="portrait">
+
+                        <img
+                            src="images/condown.jpeg"
+                            alt="Nily">
+
+                    </div>
+
+                    <h3>
+                        Nily januarti
+                    </h3>
+
+                    <p>
+                        Putri dari
+                    </p>
+
+                    <strong>
+                        Bapak Nama Ayah<br>
+                        & Ibu Nama Ibu
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COUNTDOWN -->
+
+        <section class="countdown-section">
+
+            <div class="countdown-overlay"></div>
+
+            <div class="countdown-content">
+
+                <p class="label">
+                    SAVE THE DATE
+                </p>
+
+                <h2>
+                    Menuju Hari Bahagia
+                </h2>
+
+                <div class="countdown">
+
+
+                    <div class="time-box">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            HARI
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            JAM
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            MENIT
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            DETIK
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOVE STORY -->
+
+        <section class="section story">
+
+            <p class="label">
+                OUR STORY
+            </p>
+
+            <h2>
+                Kisah Kami
+            </h2>
+
+
+            <div class="story-item">
+
+                <span>
+                    2022
+                </span>
+
+                <h3>
+                    Pertama Bertemu
+                </h3>
+
+                <p>
+                    Ceritakan bagaimana kalian pertama
+                    kali bertemu di sini.
+                </p>
+
+            </div>
+
+
+            <div class="story-item">
+
+                <span>
+                    2024
+                </span>
+
+                <h3>
+                    Menjalin Hubungan
+                </h3>
+
+                <p>
+                    Ceritakan perjalanan hubungan
+                    kalian di sini.
+                </p>
+
+            </div>
+
+
+            <div class="story-item">
+
+                <span>
+                    2026
+                </span>
+
+                <h3>
+                    Menuju Pernikahan
+                </h3>
+
+                <p>
+                    Setelah melewati banyak cerita,
+                    akhirnya kami memutuskan untuk
+                    melangkah ke jenjang pernikahan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT -->
+
+        <section class="section event">
+
+            <p class="label">
+                WEDDING EVENT
+            </p>
+
+            <h2>
+                Detail Acara
+            </h2>
+
+
+            <div class="event-container">
+
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Akad Nikah
+                    </h3>
+
+                    <p>
+                        Sabtu, 12 Desember 2026
+                    </p>
+
+                    <strong>
+                        09.00 WITA - Selesai
+                    </strong>
+
+                    <hr>
+
+                    <p>
+                        Gedung Pernikahan Bahagia
+                    </p>
+
+                    <p>
+                        Banjarmasin, Kalimantan Selatan
+                    </p>
+
+                </div>
+
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Resepsi
+                    </h3>
+
+                    <p>
+                        Sabtu, 12 Desember 2026
+                    </p>
+
+                    <strong>
+                        11.00 WITA - Selesai
+                    </strong>
+
+                    <hr>
+
+                    <p>
+                        Gedung Pernikahan Bahagia
+                    </p>
+
+                    <p>
+                        Banjarmasin, Kalimantan Selatan
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="maps-button"
+                href="https://maps.google.com"
+                target="_blank">
+
+                📍 Buka Google Maps
+
+            </a>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section class="section gallery">
+
+            <p class="label">
+                OUR MOMENTS
+            </p>
+
+            <h2>
+                Galeri
+            </h2>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="images/foto1.jpg">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/foto2.jpg">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/foto3.jpg">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/foto4.jpg">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RSVP -->
+
+        <section class="section rsvp">
+
+            <p class="label">
+                RSVP
+            </p>
+
+            <h2>
+                Konfirmasi Kehadiran
+            </h2>
+
+            <p>
+                Kehadiran dan doa restu Anda merupakan
+                kebahagiaan bagi kami.
+            </p>
+
+            <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                class="wa-button">
+
+                💬 Konfirmasi via WhatsApp
+
+            </a>
+
+        </section>
+
+
+        <!-- CLOSING -->
+
+        <section class="closing">
+
+            <div class="closing-overlay"></div>
+
+            <div class="closing-content">
+
+                <p>
+                    Terima kasih atas perhatian,
+                    doa dan restu yang diberikan
+                    kepada kami.
+                </p>
+
+                <h2>
+                    Ryan
+                    <span>&</span>
+                    Alya
+                </h2>
+
+                <p>
+                    Wassalamu'alaikum
+                    Warahmatullahi Wabarakatuh
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Ryan & Alya
+            </p>
+
+            <small>
+                Made with ❤️
+            </small>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
