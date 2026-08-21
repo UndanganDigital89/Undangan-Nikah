@@ -876,7 +876,7 @@ a {
     color: white;
 
     background:
-        url("images/background.jpg");
+        url("images/background.jpeg");
 
     background-size: cover;
 
@@ -1141,5 +1141,173 @@ footer small {
     .opening-date {
         font-size: 10px;
         letter-spacing: 2px;
+    }
+}
+
+#leaves {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.leaf {
+    position: absolute;
+    top: -80px;
+
+    width: 40px;
+    height: 40px;
+
+    background-image: url("images/daun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: leafFall linear forwards;
+
+    pointer-events: none;
+}
+
+@keyframes leafFall {
+    0% {
+        transform: translate3d(0, -80px, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    30% {
+        transform: translate3d(60px, 30vh, 0) rotate(120deg);
+    }
+
+    50% {
+        transform: translate3d(-50px, 55vh, 0) rotate(240deg);
+    }
+
+    75% {
+        transform: translate3d(60px, 80vh, 0) rotate(330deg);
+    }
+
+    100% {
+        transform: translate3d(-40px, 110vh, 0) rotate(450deg);
+        opacity: 0;
+    }
+}
+
+/* =================================
+   SOFT WEDDING GLOW
+================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 9998;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 255, 255, 0.12),
+            transparent 45%
+        );
+
+    animation: softGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+
+    0% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 0.75;
+    }
+}
+
+/* ✨ Sparkle */
+#sparkles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9997;
+}
+
+.sparkle {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    background: white;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 4px white,
+        0 0 10px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 35px rgba(255, 255, 255, 0.35);
+
+    animation: sparkleGlow 3s ease-in-out infinite;
+}
+
+/* Cahaya menyilang ✨ */
+.sparkle::before,
+.sparkle::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: linear-gradient(
+        transparent,
+        rgba(255,255,255,0.9),
+        transparent
+    );
+
+    border-radius: 50%;
+}
+
+.sparkle::before {
+    width: 2px;
+    height: 28px;
+}
+
+.sparkle::after {
+    width: 28px;
+    height: 2px;
+}
+
+@keyframes sparkleGlow {
+
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    30% {
+        opacity: 0.3;
+        transform: scale(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    70% {
+        opacity: 0.4;
+        transform: scale(0.7);
     }
 }

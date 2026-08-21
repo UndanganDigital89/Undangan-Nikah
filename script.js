@@ -237,3 +237,59 @@ galleryImages.forEach(function(image) {
     });
 
 });
+
+const leavesContainer = document.getElementById("leaves");
+
+function createLeaf() {
+
+    const leaf = document.createElement("div");
+
+    leaf.className = "leaf";
+
+    leaf.style.left = Math.random() * 100 + "vw";
+
+    const size = 0.6 + Math.random() * 0.8;
+
+    leaf.style.width = (10 * size) + "px";
+    leaf.style.height = (18 * size) + "px";
+
+    const duration = 8 + Math.random() * 8;
+
+    leaf.style.animationDuration = duration + "s";
+
+    leavesContainer.appendChild(leaf);
+
+    setTimeout(() => {
+        leaf.remove();
+    }, (duration + 1) * 1000);
+}
+
+setInterval(createLeaf, 1000);
+
+const sparklesContainer = document.getElementById("sparkles");
+
+function createSparkle() {
+
+    const sparkle = document.createElement("div");
+
+    sparkle.className = "sparkle";
+
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+
+    const size = 2 + Math.random() * 4;
+
+    sparkle.style.width = size + "px";
+    sparkle.style.height = size + "px";
+
+    sparkle.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    sparklesContainer.appendChild(sparkle);
+
+    setTimeout(() => {
+        sparkle.remove();
+    }, 6000);
+}
+
+setInterval(createSparkle, 1500);
