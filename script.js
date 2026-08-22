@@ -2,8 +2,8 @@
 // SETTING
 // ==============================
 
-// GANTI TANGGAL HARI H
-const weddingDate = new Date("December 12, 2026 09:00:00").getTime();
+// Tanggal resepsi: 20 September 2026, pukul 08.00 WITA
+const weddingDate = new Date("2026-09-20T08:00:00+08:00").getTime();
 
 
 // ==============================
@@ -183,7 +183,7 @@ const observer = new IntersectionObserver(
 // Elemen yang ingin dianimasikan
 document
     .querySelectorAll(
-        ".section, .person, .event-card, .gallery-item, .story-item"
+        ".section, .person, .event-card, .gallery-item"
     )
     .forEach(function(element) {
 
@@ -192,6 +192,28 @@ document
         observer.observe(element);
 
     });
+
+
+// SALIN NOMOR DANA
+
+function copyDanaNumber() {
+
+    const danaNumber = document
+        .getElementById("danaNumber")
+        .innerText;
+
+    const copyMessage = document
+        .getElementById("copyMessage");
+
+    navigator.clipboard.writeText(danaNumber)
+        .then(function() {
+            copyMessage.innerText = "Nomor DANA berhasil disalin";
+        })
+        .catch(function() {
+            copyMessage.innerText = "Silakan salin nomor DANA secara manual";
+        });
+
+}
 
 
 // ==============================
